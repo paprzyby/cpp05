@@ -6,7 +6,7 @@
 /*   By: paprzyby <paprzyby@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/03/14 12:17:33 by paprzyby          #+#    #+#             */
-/*   Updated: 2025/03/14 14:11:43 by paprzyby         ###   ########.fr       */
+/*   Updated: 2025/03/14 14:30:45 by paprzyby         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -59,12 +59,12 @@ void	Bureaucrat::decrementGrade()
 
 const char	*Bureaucrat::GradeTooHighException:: what() const noexcept
 {
-	return ("The grade too high!");
+	return ("The grade is too high!");
 }
 
 const char	*Bureaucrat::GradeTooLowException:: what() const noexcept
 {
-	return ("The grade too low!");
+	return ("The grade is too low!");
 }
 
 std::ostream	&operator<<(std::ostream& output, const Bureaucrat &bureaucrat)
