@@ -6,7 +6,7 @@
 /*   By: paprzyby <paprzyby@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/03/14 12:17:31 by paprzyby          #+#    #+#             */
-/*   Updated: 2025/03/14 12:18:52 by paprzyby         ###   ########.fr       */
+/*   Updated: 2025/03/14 12:31:46 by paprzyby         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,6 +22,21 @@ class	Bureaucrat
 		Bureaucrat(Bureaucrat &other);
 		Bureaucrat &operator=(Bureaucrat &other);
 		~Bureaucrat();
+
+		void				GradeTooHighException() const;
+		void				GradeTooLowException() const;
+
+		const std::string	getName() const;
+		int					getGrade() const;
+
+		void				incrementGrade();
+		void				decrementGrade();
+
+	private:
+		const std::string	name;
+		int					grade;
 };
+
+std::ostream	&operator<<(std::ostream& output, const Bureaucrat &bureaucrat);
 
 #endif
