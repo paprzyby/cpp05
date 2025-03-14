@@ -6,7 +6,7 @@
 /*   By: paprzyby <paprzyby@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/03/14 12:17:31 by paprzyby          #+#    #+#             */
-/*   Updated: 2025/03/14 12:58:06 by paprzyby         ###   ########.fr       */
+/*   Updated: 2025/03/14 14:06:08 by paprzyby         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,14 +24,20 @@ class	Bureaucrat
 		Bureaucrat &operator=(const Bureaucrat &other);
 		~Bureaucrat();
 
-		void				GradeTooHighException() const;
-		void				GradeTooLowException() const;
-
 		const std::string	getName() const;
 		int					getGrade() const;
 
 		void				incrementGrade();
 		void				decrementGrade();
+
+		class GradeTooHighException : public std::exception {
+			public:
+				const char	*what() const noexcept;
+			};
+		class GradeTooLowException : public std::exception {
+			public:
+				const char	*what() const noexcept;
+		};
 
 	private:
 		const std::string	name;
