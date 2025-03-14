@@ -6,9 +6,11 @@
 /*   By: paprzyby <paprzyby@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/03/14 12:16:45 by paprzyby          #+#    #+#             */
-/*   Updated: 2025/03/14 12:17:12 by paprzyby         ###   ########.fr       */
+/*   Updated: 2025/03/14 12:56:33 by paprzyby         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+
+#include "Bureaucrat.hpp"
 
 int	main()
 {

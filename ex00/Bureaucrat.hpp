@@ -6,7 +6,7 @@
 /*   By: paprzyby <paprzyby@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/03/14 12:17:31 by paprzyby          #+#    #+#             */
-/*   Updated: 2025/03/14 12:31:46 by paprzyby         ###   ########.fr       */
+/*   Updated: 2025/03/14 12:58:06 by paprzyby         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,8 +19,9 @@ class	Bureaucrat
 {
 	public:
 		Bureaucrat();
-		Bureaucrat(Bureaucrat &other);
-		Bureaucrat &operator=(Bureaucrat &other);
+		Bureaucrat(const std::string name, int grade);
+		Bureaucrat(const Bureaucrat &other);
+		Bureaucrat &operator=(const Bureaucrat &other);
 		~Bureaucrat();
 
 		void				GradeTooHighException() const;
