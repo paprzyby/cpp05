@@ -6,7 +6,7 @@
 /*   By: paprzyby <paprzyby@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/03/14 12:17:33 by paprzyby          #+#    #+#             */
-/*   Updated: 2025/03/14 14:30:45 by paprzyby         ###   ########.fr       */
+/*   Updated: 2025/03/17 14:35:35 by paprzyby         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -71,4 +71,9 @@ std::ostream	&operator<<(std::ostream& output, const Bureaucrat &bureaucrat)
 {
 	output << bureaucrat.getName() << ", bureaucrat grade " << bureaucrat.getGrade();
 	return (output);
+}
+
+void	Bureaucrat::beSigned(const Bureaucrat bureaucrat)
+{
+	
 }

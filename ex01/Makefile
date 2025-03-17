@@ -6,7 +6,7 @@
 #    By: paprzyby <paprzyby@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2025/01/30 16:15:27 by paprzyby          #+#    #+#              #
-#    Updated: 2025/03/14 12:19:06 by paprzyby         ###   ########.fr        #
+#    Updated: 2025/03/14 15:48:10 by paprzyby         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -15,7 +15,8 @@
 NAME =		bureaucrat
 
 SRC =		main.cpp \
-			Bureaucrat.cpp
+			Bureaucrat.cpp \
+			Form.cpp
 
 OBJ_DIR =	obj
 OBJ =		$(SRC:%.cpp=$(OBJ_DIR)/%.o)
