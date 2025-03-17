@@ -6,7 +6,7 @@
 /*   By: paprzyby <paprzyby@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/03/14 12:17:31 by paprzyby          #+#    #+#             */
-/*   Updated: 2025/03/17 14:34:27 by paprzyby         ###   ########.fr       */
+/*   Updated: 2025/03/17 15:17:27 by paprzyby         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,6 +14,7 @@
 # define FORM_HPP
 
 # include <iostream>
+# include "Bureaucrat.hpp"
 
 class Bureaucrat;
 
@@ -38,8 +39,9 @@ class	Form
 		const std::string	getName() const;
 		int					getGrade_to_sign() const;
 		int					getGrade_to_execute() const;
+		std::string			getIs_signed() const;
 
-		void				signForm(Form form);
+		void				beSigned(Bureaucrat &bureaucrat);
 
 	private:
 		const std::string	name;

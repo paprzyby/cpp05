@@ -6,7 +6,7 @@
 /*   By: paprzyby <paprzyby@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/03/14 12:17:31 by paprzyby          #+#    #+#             */
-/*   Updated: 2025/03/17 14:31:48 by paprzyby         ###   ########.fr       */
+/*   Updated: 2025/03/17 15:10:50 by paprzyby         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,6 +15,8 @@
 
 # include <iostream>
 # include "Form.hpp"
+
+class Form;
 
 class	Bureaucrat
 {
@@ -40,7 +42,7 @@ class	Bureaucrat
 				const char	*what() const noexcept;
 		};
 
-		void				beSigned(const Bureaucrat bureaucrat);
+		void				signForm(Form &form);
 
 	private:
 		const std::string	name;
