@@ -6,7 +6,7 @@
 /*   By: paprzyby <paprzyby@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/03/14 12:17:33 by paprzyby          #+#    #+#             */
-/*   Updated: 2025/03/17 15:05:49 by paprzyby         ###   ########.fr       */
+/*   Updated: 2025/03/21 12:48:22 by paprzyby         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -73,7 +73,7 @@ std::ostream	&operator<<(std::ostream& output, const Bureaucrat &bureaucrat)
 	return (output);
 }
 
-void	Bureaucrat::signForm(Form &form)
+void	Bureaucrat::signForm(AForm &form)
 {
 	try
 	{
@@ -83,5 +83,18 @@ void	Bureaucrat::signForm(Form &form)
 	catch (std::exception & e)
 	{
 		std::cout << this->getName() << " couldn't sign " << form.getName() << " because " << e.what() << std::endl;
+	}
+}
+
+void	Bureaucrat::executeForm(AForm const &form)
+{
+	try
+	{
+		form.execute(*this);
+		std::cout << "check" << std::endl;
+	}
+	catch (std::exception & e)
+	{
+		std::cout << "wrong" << std::endl;
 	}
 }

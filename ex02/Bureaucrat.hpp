@@ -6,7 +6,7 @@
 /*   By: paprzyby <paprzyby@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/03/14 12:17:31 by paprzyby          #+#    #+#             */
-/*   Updated: 2025/03/19 14:52:12 by paprzyby         ###   ########.fr       */
+/*   Updated: 2025/03/19 15:58:13 by paprzyby         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,7 +16,7 @@
 # include <iostream>
 # include "AForm.hpp"
 
-class Form;
+class AForm;
 
 class	Bureaucrat
 {
@@ -42,7 +42,8 @@ class	Bureaucrat
 				const char	*what() const noexcept;
 		};
 
-		void				signForm(Form &form);
+		void				signForm(AForm &form);
+		void				executeForm(AForm const &form);
 
 	private:
 		const std::string	name;

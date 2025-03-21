@@ -6,7 +6,7 @@
 /*   By: paprzyby <paprzyby@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/03/19 14:45:42 by paprzyby          #+#    #+#             */
-/*   Updated: 2025/03/19 15:14:20 by paprzyby         ###   ########.fr       */
+/*   Updated: 2025/03/21 12:49:10 by paprzyby         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -34,7 +34,7 @@ void	ShrubberyCreationForm::execute(Bureaucrat const &executor)
 	std::ofstream file(filename.c_str());
 
 	if (!file.is_open())
-		throw std::runtime_error("Could not open file");
+		throw (std::runtime_error("Could not open file"));
 	file << "        ccee88oo" << std::endl;
 	file << "     C8O8O8Q8PoOb o8oo" << std::endl;
 	file << "  dOB69QO8PdUOpugoO9bD" << std::endl;

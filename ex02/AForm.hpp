@@ -6,7 +6,7 @@
 /*   By: paprzyby <paprzyby@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/03/14 12:17:31 by paprzyby          #+#    #+#             */
-/*   Updated: 2025/03/18 12:58:39 by paprzyby         ###   ########.fr       */
+/*   Updated: 2025/03/21 12:43:12 by paprzyby         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -41,7 +41,8 @@ class	AForm
 		int					getGrade_to_execute() const;
 		std::string			getIs_signed() const;
 
-		void				beSigned(Bureaucrat &bureaucrat);
+		void						beSigned(Bureaucrat &bureaucrat);
+		virtual void				execute(Bureaucrat const &executor) const = 0;
 
 	private:
 		const std::string	name;
