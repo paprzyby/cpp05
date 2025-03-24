@@ -6,7 +6,7 @@
 /*   By: paprzyby <paprzyby@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/03/19 15:51:19 by paprzyby          #+#    #+#             */
-/*   Updated: 2025/03/19 15:52:17 by paprzyby         ###   ########.fr       */
+/*   Updated: 2025/03/22 15:32:52 by paprzyby         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,7 +24,7 @@ class	PresidentialPardonForm : public AForm
 		PresidentialPardonForm &operator=(const PresidentialPardonForm &other);
 		~PresidentialPardonForm();
 
-		void	execute(Bureaucrat const &executor);
+		void	execute(Bureaucrat const &executor) const;
 
 	private:
 		std::string	target;

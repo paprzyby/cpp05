@@ -6,13 +6,13 @@
 /*   By: paprzyby <paprzyby@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/03/14 15:39:23 by paprzyby          #+#    #+#             */
-/*   Updated: 2025/03/17 15:17:14 by paprzyby         ###   ########.fr       */
+/*   Updated: 2025/03/24 16:59:42 by paprzyby         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "Form.hpp"
 
-Form::Form() : name(""), is_signed(false), grade_to_sign(150), grade_to_execute(150)	{}
+Form::Form() : name("default name"), is_signed(false), grade_to_sign(150), grade_to_execute(150)	{}
 
 Form::Form(const std::string name, const int grade_to_sign, const int grade_to_execute) : name(name), grade_to_sign(grade_to_sign), grade_to_execute(grade_to_execute)
 {

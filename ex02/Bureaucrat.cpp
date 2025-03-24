@@ -6,13 +6,13 @@
 /*   By: paprzyby <paprzyby@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/03/14 12:17:33 by paprzyby          #+#    #+#             */
-/*   Updated: 2025/03/21 12:48:22 by paprzyby         ###   ########.fr       */
+/*   Updated: 2025/03/24 17:05:14 by paprzyby         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "Bureaucrat.hpp"
 
-Bureaucrat::Bureaucrat() : name(""), grade(150) {}
+Bureaucrat::Bureaucrat() : name("default name"), grade(150) {}
 
 Bureaucrat::Bureaucrat(const std::string name, int grade) : name(name)
 {
@@ -91,10 +91,10 @@ void	Bureaucrat::executeForm(AForm const &form)
 	try
 	{
 		form.execute(*this);
-		std::cout << "check" << std::endl;
+		std::cout << name << " executed " << form.getName() << std::endl;
 	}
 	catch (std::exception & e)
 	{
-		std::cout << "wrong" << std::endl;
+		std::cout << name << " couldn't execute " << form.getName() << " because " << e.what() << std::endl;
 	}
 }

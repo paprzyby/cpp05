@@ -6,13 +6,13 @@
 /*   By: paprzyby <paprzyby@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/03/14 12:17:33 by paprzyby          #+#    #+#             */
-/*   Updated: 2025/03/17 15:05:49 by paprzyby         ###   ########.fr       */
+/*   Updated: 2025/03/24 16:59:05 by paprzyby         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "Bureaucrat.hpp"
 
-Bureaucrat::Bureaucrat() : name(""), grade(150) {}
+Bureaucrat::Bureaucrat() : name("default name"), grade(150) {}
 
 Bureaucrat::Bureaucrat(const std::string name, int grade) : name(name)
 {

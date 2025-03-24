@@ -6,13 +6,13 @@
 /*   By: paprzyby <paprzyby@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/03/14 15:39:23 by paprzyby          #+#    #+#             */
-/*   Updated: 2025/03/18 12:59:18 by paprzyby         ###   ########.fr       */
+/*   Updated: 2025/03/24 17:04:54 by paprzyby         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "AForm.hpp"
 
-AForm::AForm() : name(""), is_signed(false), grade_to_sign(150), grade_to_execute(150)	{}
+AForm::AForm() : name("default name"), is_signed(false), grade_to_sign(150), grade_to_execute(150)	{}
 
 AForm::AForm(const std::string name, const int grade_to_sign, const int grade_to_execute) : name(name), grade_to_sign(grade_to_sign), grade_to_execute(grade_to_execute)
 {
@@ -87,4 +87,9 @@ void	AForm::beSigned(Bureaucrat &bureaucrat)
 	if (bureaucrat.getGrade() > grade_to_sign)
 		throw (GradeTooLowException());
 	is_signed = true;
+}
+
+void	AForm::checkPermission(Bureaucrat &bureaucrat) const
+{
+
 }
