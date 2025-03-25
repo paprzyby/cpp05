@@ -6,13 +6,13 @@
 /*   By: paprzyby <paprzyby@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/03/19 15:52:18 by paprzyby          #+#    #+#             */
-/*   Updated: 2025/03/25 15:51:09 by paprzyby         ###   ########.fr       */
+/*   Updated: 2025/03/25 16:04:32 by paprzyby         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "PresidentialPardonForm.hpp"
 
-PresidentialPardonForm::PresidentialPardonForm() : AForm("default name", 72, 45), target("default target")	{}
+PresidentialPardonForm::PresidentialPardonForm() : AForm("Default PresidentialPardonForm name", 72, 45), target("default target")	{}
 
 PresidentialPardonForm::PresidentialPardonForm(const PresidentialPardonForm &other) : AForm(other), target(other.target)	{}
 

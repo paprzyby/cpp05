@@ -6,7 +6,7 @@
 /*   By: paprzyby <paprzyby@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/03/14 12:17:31 by paprzyby          #+#    #+#             */
-/*   Updated: 2025/03/25 14:31:53 by paprzyby         ###   ########.fr       */
+/*   Updated: 2025/03/25 16:58:28 by paprzyby         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -51,6 +51,7 @@ class	AForm
 		std::string			getIs_signed() const;
 		void				beSigned(Bureaucrat &bureaucrat);
 		virtual void		execute(Bureaucrat const &executor) const = 0;
+		bool				random = false;
 
 	private:
 		const std::string	name;

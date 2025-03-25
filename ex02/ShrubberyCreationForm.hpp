@@ -6,7 +6,7 @@
 /*   By: paprzyby <paprzyby@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/03/19 14:41:46 by paprzyby          #+#    #+#             */
-/*   Updated: 2025/03/22 16:26:59 by paprzyby         ###   ########.fr       */
+/*   Updated: 2025/03/25 16:05:10 by paprzyby         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,7 +21,6 @@ class	ShrubberyCreationForm : public AForm
 {
 	public:
 		ShrubberyCreationForm();
-		ShrubberyCreationForm(std::string target);
 		ShrubberyCreationForm(const ShrubberyCreationForm &other);
 		ShrubberyCreationForm &operator=(const ShrubberyCreationForm &other);
 		~ShrubberyCreationForm();

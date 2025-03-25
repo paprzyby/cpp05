@@ -6,17 +6,30 @@
 /*   By: paprzyby <paprzyby@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/03/19 15:23:18 by paprzyby          #+#    #+#             */
-/*   Updated: 2025/03/25 15:51:54 by paprzyby         ###   ########.fr       */
+/*   Updated: 2025/03/25 17:32:54 by paprzyby         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "RobotomyRequestForm.hpp"
+#include <unistd.h>
 
-int RobotomyRequestForm::num = 0;
+RobotomyRequestForm::RobotomyRequestForm() : AForm("Default RobotomyRequestForm name", 72, 45), target("default target")
+{
+	if (!random)
+	{
+		srand(time(NULL));
+		random = true;
+	}
+}
 
-RobotomyRequestForm::RobotomyRequestForm() : AForm("", 72, 45), target("default target")	{}
-
-RobotomyRequestForm::RobotomyRequestForm(const RobotomyRequestForm &other) : AForm(other), target(other.target)	{}
+RobotomyRequestForm::RobotomyRequestForm(const RobotomyRequestForm &other) : AForm(other), target(other.target)
+{
+	if (!random)
+	{
+		srand(time(NULL));
+		random = true;
+	}
+}
 
 RobotomyRequestForm& RobotomyRequestForm::operator=(const RobotomyRequestForm &other)
 {
@@ -24,7 +37,7 @@ RobotomyRequestForm& RobotomyRequestForm::operator=(const RobotomyRequestForm &o
 	{
 		AForm::operator=(other);
 		this->target = other.target;
-		this->num = other.num;
+		this->random = other.random;
 	}
 	return (*this);
 }
@@ -37,14 +50,10 @@ void	RobotomyRequestForm::execute(Bureaucrat const&executor) const
 		throw (NotSignedException());
 	if (executor.getGrade() > getGrade_to_execute())
 		throw (GradeTooLowException());
-	if (num % 2 == 0)
-	{
-		std::cout << target << "has been robotomized" << std::endl;
-		num = num + 1;
-	}
+	std::cout << "Drilling..." << std::endl;
+	sleep(1);
+	if (rand() % 100 < 50)
+		std::cout << target << " has been robotomized" << std::endl;
 	else
-	{
 		std::cout << "Robotomy failed" << std::endl;
-		num = num + 1;
-	}
 }
