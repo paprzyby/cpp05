@@ -6,7 +6,7 @@
 /*   By: paprzyby <paprzyby@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/03/14 15:39:23 by paprzyby          #+#    #+#             */
-/*   Updated: 2025/03/24 17:04:54 by paprzyby         ###   ########.fr       */
+/*   Updated: 2025/03/25 14:32:15 by paprzyby         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -89,7 +89,7 @@ void	AForm::beSigned(Bureaucrat &bureaucrat)
 	is_signed = true;
 }
 
-void	AForm::checkPermission(Bureaucrat &bureaucrat) const
+const char	*AForm::NotSignedException:: what() const noexcept
 {
-
+	return ("The Form is not signed!");
 }

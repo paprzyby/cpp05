@@ -6,7 +6,7 @@
 /*   By: paprzyby <paprzyby@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/03/14 12:17:31 by paprzyby          #+#    #+#             */
-/*   Updated: 2025/03/24 16:59:56 by paprzyby         ###   ########.fr       */
+/*   Updated: 2025/03/25 14:31:23 by paprzyby         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -33,11 +33,14 @@ class	Form
 		std::string			getIs_signed() const;
 		void				beSigned(Bureaucrat &bureaucrat);
 
-		class GradeTooHighException : public std::exception {
+		class GradeTooHighException : public std::exception
+		{
 			public:
 				const char	*what() const noexcept;
 		};
-		class GradeTooLowException : public std::exception {
+
+		class GradeTooLowException : public std::exception
+		{
 			public:
 				const char	*what() const noexcept;
 		};
