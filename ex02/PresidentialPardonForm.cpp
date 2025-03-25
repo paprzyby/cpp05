@@ -6,7 +6,7 @@
 /*   By: paprzyby <paprzyby@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/03/19 15:52:18 by paprzyby          #+#    #+#             */
-/*   Updated: 2025/03/24 18:24:39 by paprzyby         ###   ########.fr       */
+/*   Updated: 2025/03/25 15:51:09 by paprzyby         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -30,7 +30,9 @@ PresidentialPardonForm::~PresidentialPardonForm()	{}
 
 void	PresidentialPardonForm::execute(Bureaucrat const &executor) const
 {
-	(void)executor;
-	//checkPermission(executor);
+	if (getIs_signed() == "false")
+		throw (NotSignedException());
+	if (executor.getGrade() > getGrade_to_execute())
+		throw (GradeTooLowException());
 	std::cout << target << " has been pardoned by Zaphod Beeblebrox" << std::endl;
 }

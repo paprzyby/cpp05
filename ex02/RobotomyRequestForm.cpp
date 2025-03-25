@@ -6,7 +6,7 @@
 /*   By: paprzyby <paprzyby@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/03/19 15:23:18 by paprzyby          #+#    #+#             */
-/*   Updated: 2025/03/24 17:05:51 by paprzyby         ###   ########.fr       */
+/*   Updated: 2025/03/25 15:51:54 by paprzyby         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -33,7 +33,10 @@ RobotomyRequestForm::~RobotomyRequestForm()	{}
 
 void	RobotomyRequestForm::execute(Bureaucrat const&executor) const
 {
-	(void)executor;
+	if (getIs_signed() == "false")
+		throw (NotSignedException());
+	if (executor.getGrade() > getGrade_to_execute())
+		throw (GradeTooLowException());
 	if (num % 2 == 0)
 	{
 		std::cout << target << "has been robotomized" << std::endl;

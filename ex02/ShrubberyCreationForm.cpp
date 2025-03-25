@@ -6,7 +6,7 @@
 /*   By: paprzyby <paprzyby@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/03/19 14:45:42 by paprzyby          #+#    #+#             */
-/*   Updated: 2025/03/24 17:20:58 by paprzyby         ###   ########.fr       */
+/*   Updated: 2025/03/25 15:51:59 by paprzyby         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -32,7 +32,10 @@ ShrubberyCreationForm::~ShrubberyCreationForm()	{}
 
 void	ShrubberyCreationForm::execute(Bureaucrat const &executor) const
 {
-	(void)executor;
+	if (getIs_signed() == "false")
+		throw (NotSignedException());
+	if (executor.getGrade() > getGrade_to_execute())
+		throw (GradeTooLowException());
 
 	std::string filename = target + "_shrubbery";
 	std::ofstream file(filename.c_str());
