@@ -6,7 +6,7 @@
 /*   By: paprzyby <paprzyby@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/03/25 18:10:56 by paprzyby          #+#    #+#             */
-/*   Updated: 2025/03/25 18:28:29 by paprzyby         ###   ########.fr       */
+/*   Updated: 2025/03/28 15:35:19 by paprzyby         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,6 +15,9 @@
 
 # include <iostream>
 # include "AForm.hpp"
+# include "PresidentialPardonForm.hpp"
+# include "RobotomyRequestForm.hpp"
+# include "ShrubberyCreationForm.hpp"
 
 class	Intern
 {
@@ -28,5 +31,8 @@ class	Intern
 };
 
 std::ostream	&operator<<(std::ostream& output, const Intern &form);
+AForm			*createRobotomyRequestForm(std::string &target);
+AForm			*createPresidentialPardonForm(std::string &target);
+AForm			*createShrubberyCreationForm(std::string &target);
 
 #endif

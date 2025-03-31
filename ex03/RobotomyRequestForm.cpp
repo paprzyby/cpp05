@@ -6,7 +6,7 @@
 /*   By: paprzyby <paprzyby@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/03/19 15:23:18 by paprzyby          #+#    #+#             */
-/*   Updated: 2025/03/25 17:32:54 by paprzyby         ###   ########.fr       */
+/*   Updated: 2025/03/28 16:53:26 by paprzyby         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,6 +14,15 @@
 #include <unistd.h>
 
 RobotomyRequestForm::RobotomyRequestForm() : AForm("Default RobotomyRequestForm name", 72, 45), target("default target")
+{
+	if (!random)
+	{
+		srand(time(NULL));
+		random = true;
+	}
+}
+
+RobotomyRequestForm::RobotomyRequestForm(std::string &target) : AForm("Default RobotomyRequestForm name", 72, 45), target(target)
 {
 	if (!random)
 	{

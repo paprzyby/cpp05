@@ -6,7 +6,7 @@
 /*   By: paprzyby <paprzyby@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/03/14 12:16:45 by paprzyby          #+#    #+#             */
-/*   Updated: 2025/03/25 18:30:08 by paprzyby         ###   ########.fr       */
+/*   Updated: 2025/03/31 17:19:51 by paprzyby         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,53 +18,14 @@
 
 int	main()
 {
-	Intern someRandomIntern;
-	AForm* rrf;
+	Intern	intern1;
+	AForm	*robot_form = intern1.makeForm("RobotomyRequestForm", "Robot");
 
-	rrf = someRandomIntern.makeForm("robotomy request", "Bender");
-	//try
-	//{
-	//	Bureaucrat				bureaucrat("John", 1);
-	//	ShrubberyCreationForm	form;
-
-	//	bureaucrat.signForm(form);
-	//	bureaucrat.executeForm(form);
-	//}
-	//catch(const std::exception& e)
-	//{
-	//	std::cerr << e.what() << '\n';
-	//}
-
-	//std::cout << "================================================" << std::endl;
-
-	//try
-	//{
-	//	Bureaucrat				bureaucrat("John", 1);
-	//	PresidentialPardonForm	form;
-
-	//	bureaucrat.signForm(form);
-	//	bureaucrat.executeForm(form);
-	//}
-	//catch(const std::exception& e)
-	//{
-	//	std::cerr << e.what() << '\n';
-	//}
-
-	//std::cout << "================================================" << std::endl;
-
-	//try
-	//{
-	//	Bureaucrat				bureaucrat("John", 1);
-	//	RobotomyRequestForm		form;
-
-	//	bureaucrat.signForm(form);
-	//	bureaucrat.executeForm(form);
-	//	bureaucrat.executeForm(form);
-	//	bureaucrat.executeForm(form);
-	//	bureaucrat.executeForm(form);
-	//}
-	//catch(const std::exception& e)
-	//{
-	//	std::cerr << e.what() << '\n';
-	//}
+	if (robot_form)
+	{
+		Bureaucrat john("John", 46);
+		john.signForm(*robot_form);
+		john.executeForm(*robot_form);
+		delete (robot_form);
+	}
 }
