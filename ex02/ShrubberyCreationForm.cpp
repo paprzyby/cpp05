@@ -6,13 +6,15 @@
 /*   By: paprzyby <paprzyby@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/03/19 14:45:42 by paprzyby          #+#    #+#             */
-/*   Updated: 2025/03/25 16:05:03 by paprzyby         ###   ########.fr       */
+/*   Updated: 2025/03/31 19:57:02 by paprzyby         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ShrubberyCreationForm.hpp"
 
 ShrubberyCreationForm::ShrubberyCreationForm() : AForm("Default ShrubberyCreationForm name", 145, 137), target("default target")	{}
+
+ShrubberyCreationForm::ShrubberyCreationForm(const std::string &target) : AForm("Default ShrubberyCreationForm name", 145, 137), target(target)	{}
 
 ShrubberyCreationForm::ShrubberyCreationForm(const ShrubberyCreationForm &other) : AForm(other), target(other.target)	{}
 

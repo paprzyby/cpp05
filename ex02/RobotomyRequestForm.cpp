@@ -6,7 +6,7 @@
 /*   By: paprzyby <paprzyby@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/03/19 15:23:18 by paprzyby          #+#    #+#             */
-/*   Updated: 2025/03/25 17:32:54 by paprzyby         ###   ########.fr       */
+/*   Updated: 2025/03/31 19:56:50 by paprzyby         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,6 +21,8 @@ RobotomyRequestForm::RobotomyRequestForm() : AForm("Default RobotomyRequestForm 
 		random = true;
 	}
 }
+
+RobotomyRequestForm::RobotomyRequestForm(const std::string &target) : AForm("Default RobotomyRequestForm name", 72, 45), target(target)	{}
 
 RobotomyRequestForm::RobotomyRequestForm(const RobotomyRequestForm &other) : AForm(other), target(other.target)
 {

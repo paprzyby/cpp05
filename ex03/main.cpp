@@ -6,7 +6,7 @@
 /*   By: paprzyby <paprzyby@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/03/14 12:16:45 by paprzyby          #+#    #+#             */
-/*   Updated: 2025/03/31 17:19:51 by paprzyby         ###   ########.fr       */
+/*   Updated: 2025/03/31 19:55:38 by paprzyby         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,14 +18,27 @@
 
 int	main()
 {
-	Intern	intern1;
-	AForm	*robot_form = intern1.makeForm("RobotomyRequestForm", "Robot");
+	Intern	intern;
+	AForm	*form;
 
-	if (robot_form)
+	form  = intern.makeForm("RobotomyRequestForm", "Robot");
+	if (form)
 	{
-		Bureaucrat john("John", 46);
-		john.signForm(*robot_form);
-		john.executeForm(*robot_form);
-		delete (robot_form);
+		Bureaucrat bureaucrat("John", 1);
+		bureaucrat.signForm(*form);
+		bureaucrat.executeForm(*form);
+		delete (form);
 	}
+
+	//Intern	intern;
+	//AForm	*form;
+
+	//form  = intern.makeForm("fafasf", "Robot");
+	//if (form)
+	//{
+	//	Bureaucrat bureaucrat("John", 1);
+	//	bureaucrat.signForm(*form);
+	//	bureaucrat.executeForm(*form);
+	//	delete (form);
+	//}
 }
